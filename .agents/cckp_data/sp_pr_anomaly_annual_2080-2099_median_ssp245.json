@@ -1,0 +1,14 @@
+﻿{
+    "metadata":  {
+                     "apiVersion":  "v1",
+                     "status":  "success",
+                     "messages":  [
+
+                                  ]
+                 },
+    "data":  {
+                 "BRA.37689":  {
+                                   "2080-07":  26.57
+                               }
+             }
+}

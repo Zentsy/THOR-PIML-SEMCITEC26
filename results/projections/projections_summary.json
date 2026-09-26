@@ -1,0 +1,32 @@
+{
+  "ssp245": {
+    "label": "SSP2-4.5 (Estabiliza\u00e7\u00e3o M\u00e9dia)",
+    "total_days": 26640,
+    "date_start": "2026-01-01",
+    "date_end": "2099-12-30",
+    "pr_cordex_mean": 3.1374888138138135,
+    "pr_thor_mean": 4.294268506006006,
+    "r10_cordex_days": 2977,
+    "r10_thor_days": 3111,
+    "r20_cordex_days": 987,
+    "r20_thor_days": 694,
+    "max_rx1_cordex": 87.577,
+    "max_rx1_thor": 31.979,
+    "physical_violations": 0
+  },
+  "ssp585": {
+    "label": "SSP5-8.5 (Altas Emiss\u00f5es)",
+    "total_days": 26640,
+    "date_start": "2026-01-01",
+    "date_end": "2099-12-30",
+    "pr_cordex_mean": 2.958863813813814,
+    "pr_thor_mean": 5.3550933933933935,
+    "r10_cordex_days": 2664,
+    "r10_thor_days": 4457,
+    "r20_cordex_days": 991,
+    "r20_thor_days": 1128,
+    "max_rx1_cordex": 108.02,
+    "max_rx1_thor": 31.995,
+    "physical_violations": 0
+  }
+}

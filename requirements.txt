@@ -1,0 +1,30 @@
+# THOR-PIML — Dependências (Sprint S0 — T4 @ Lightning.AI)
+# Instale com: pip install -r requirements.txt
+# Python 3.10+ recomendado. Para T4 (CUDA 12.1): pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# Deep Learning (pinado para reprodutibilidade)
+torch==2.4.0
+# Para GPU NVIDIA T4 (Lightning.AI): pip install torch --index-url https://download.pytorch.org/whl/cu121
+# Para CPU apenas: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Ciência de Dados / Numérica
+numpy==1.26.4
+pandas==2.2.2
+
+# Machine Learning / Pré-processamento
+scikit-learn==1.4.2
+scipy==1.13.0
+
+# CORDEX / NetCDF (Sprint S7 — já preparado)
+xarray==2024.6.0
+netCDF4==1.6.5
+dask==2024.5.0
+cftime==1.6.3
+
+# Visualização
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Utilidades
+tqdm==4.66.4
+pyyaml==6.0.1

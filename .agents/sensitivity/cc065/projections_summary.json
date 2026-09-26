@@ -1,0 +1,20 @@
+{
+  "ssp585": {
+    "label": "SSP5-8.5 (Altas Emiss\u00f5es)",
+    "total_days": 26640,
+    "date_start": "2026-01-01",
+    "date_end": "2099-12-30",
+    "pr_cordex_mean": 2.958863813813814,
+    "pr_thor_mean": 5.355096734234234,
+    "r10_cordex_days": 2664,
+    "r10_thor_days": 4457,
+    "r20_cordex_days": 991,
+    "r20_thor_days": 1128,
+    "max_rx1_cordex": 108.02,
+    "max_rx1_thor": 31.995,
+    "physical_violations": 0,
+    "cc_response_per_kelvin": 0.065,
+    "cc_response_jitter": 0.0,
+    "random_seed": 42
+  }
+}

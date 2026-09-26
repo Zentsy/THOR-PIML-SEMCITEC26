@@ -1,0 +1,179 @@
+{
+  "version": "v2.0-S1",
+  "created": "2026-08-08",
+  "bbox_guarulhos": {
+    "lat_min": -23.55,
+    "lat_max": -23.3,
+    "lon_min": -46.65,
+    "lon_max": -46.35,
+    "area_km2": 318,
+    "centroid": [
+      -23.4538,
+      -46.5333
+    ],
+    "altitude_m": 750
+  },
+  "sources": {
+    "chirps_v2": {
+      "name": "CHIRPS v2.0 (Climate Hazards Center, UC Santa Barbara)",
+      "type": "Grade de precipitação (satélite IR + estações solo)",
+      "resolution_spatial": "0.05° × 0.05° (~5.5 km × 5.5 km)",
+      "resolution_temporal": "Diária (1981-presente, ~16.600 dias)",
+      "cell_area_km2": 30.25,
+      "cells_over_guarulhos": "10 a 12 células",
+      "variables": [
+        "precip (mm/dia)"
+      ],
+      "period_available": "1981-01-01 a 2026-07-31 (contínuo, <0.1% missing)",
+      "doi": "Funk et al. 2015, doi:10.1038/sdata.2015.66",
+      "url": "https://www.chc.ucsb.edu/data/chirps",
+      "ftp": "https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/",
+      "role_in_thor": "TARGET y principal (chuva observada em grade). Escolhida como backbone 1981-2026 por alta resolução e validação com pluviômetros. Corrige o erro V1 que usava reanálise como alvo.",
+      "limitations": "É grade, não pontual. Subestima levemente orografia extrema, mas muito superior a MERRA-2 50km. Requer clipping bbox e média ponderada por área.",
+      "license": "Aberto (gratuito, registro opcional)",
+      "status_v2": "Estrutura pronta em data/chirps_guarulhos_1981_2026.csv (se offline, placeholder com proveniência documentada)"
+    },
+    "era5_land": {
+      "name": "ERA5-Land (Copernicus / ECMWF, CDS)",
+      "type": "Reanálise de superfície terrestre (HTESSEL + ERA5 atmosférico)",
+      "resolution_spatial": "0.1° × 0.1° (~9 km × 9 km)",
+      "resolution_temporal": "Horária (1950-presente), agregada para diária em V2",
+      "cell_area_km2": 81,
+      "cells_over_guarulhos": "4 a 6 células",
+      "variables": [
+        "t2m (°C)",
+        "t2m_max",
+        "t2m_min",
+        "d2m (ponto orvalho)",
+        "rh2m (%)",
+        "sp (pressão superfície hPa)",
+        "u10/v10 (vento 10m)",
+        "ssrd (radiação solar MJ/m2/dia)",
+        "tp (precipitação total — NÃO usada como alvo)"
+      ],
+      "period_available": "1950-01-01 a 2026-07-31",
+      "doi": "Muñoz-Sabater et al. 2021, doi:10.5194/essd-13-4349-2021",
+      "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land",
+      "role_in_thor": "INPUTS X (forçantes físicas do PIML). Substitui NASA POWER (0.5°) como fonte de T, RH, PS, vento e radiação. 9km captura gradiente urbano-Cantareira que 50km suaviza.",
+      "limitations": "Também é reanálise (não observação), mas para variáveis termodinâmicas (T, RH, PS) a reanálise é estado-da-arte. Requer conta CDS + licença.",
+      "license": "Copernicus (gratuito, requer aceitar licença)",
+      "status_v2": "Estrutura pronta em data/era5land_guarulhos_1981_2026.csv (se offline, fallback documentado para NASA POWER com flag provenance)"
+    },
+    "cemaden_pcds": {
+      "name": "CEMADEN — Pluviômetros Automáticos (PCDs) Guarulhos",
+      "type": "Observação in situ pontual (pluviômetro automático)",
+      "resolution_spatial": "Pontual (0 km, estação física)",
+      "resolution_temporal": "10 min / horária, agregada para diária em V2",
+      "stations": [
+        {
+          "code": "3550308_Cumbica",
+          "lat": -23.4356,
+          "lon": -46.4731,
+          "alt": 750,
+          "since": "2014-05-01"
+        },
+        {
+          "code": "3550308_Aracilia",
+          "lat": -23.41,
+          "lon": -46.52,
+          "since": "2014-11-01"
+        },
+        {
+          "code": "3550308_Bonsucesso",
+          "lat": -23.4,
+          "lon": -46.38,
+          "since": "2015-03-01"
+        }
+      ],
+      "variables": [
+        "precip (mm/dia, mm/hora)"
+      ],
+      "period_available": "2014-05-01 a 2026-07-31 (~4.400 dias, ~10% missing em 2014, <2% depois)",
+      "url": "https://mapainterativo.cemaden.gov.br/ e API https://api.cemaden.gov.br/",
+      "role_in_thor": "TARGET y de alta fidelidade local (2014+). Usado para calibrar viés do CHIRPS em Guarulhos (CHIRPS tende a subestimar convecção urbana em 10-15%). Em V2: pr_target = blend(CHIRPS, CEMADEN) onde CEMADEN disponível.",
+      "limitations": "Período curto (não cobre 1981-2013). Falhas de telemetria em tempestades severas. Requer controle de qualidade (desejável cruzar com INMET).",
+      "status_v2": "Estrutura pronta em data/cemaden_guarulhos_2014_2026.csv"
+    },
+    "inmet_a701": {
+      "name": "INMET A701 — Mirante de Santana (São Paulo)",
+      "type": "Estação meteorológica convencional/automática (INMET)",
+      "resolution_spatial": "Pontual (~15 km de Guarulhos, mesmo microclima RMSP)",
+      "resolution_temporal": "Horária (1961-presente) e diária",
+      "location": {
+        "lat": -23.4969,
+        "lon": -46.6288,
+        "alt": 792
+      },
+      "variables": [
+        "precip (mm)",
+        "tmax/tmin/tmean (°C)",
+        "ur (%)",
+        "ps (hPa)",
+        "vento",
+        "radiação"
+      ],
+      "period_available": "1961-01-01 a 2026-07-31",
+      "url": "https://portal.inmet.gov.br/ e API https://apitempo.inmet.gov.br/",
+      "role_in_thor": "VALIDAÇÃO CRUZADA e backup. Não é alvo principal (15km de distância introduz viés orográfico), mas serve para checar consistência de CHIRPS+CEMADEN (ex: correlação diária deve ser >0.85).",
+      "limitations": "Distância de 15km e diferença de altitude (792m vs 750m). Não usar como único alvo.",
+      "status_v2": "Usado para QC em data/inmet_a701_1981_2026.csv"
+    },
+    "nasa_power_legacy": {
+      "name": "NASA POWER (MERRA-2 + CERES) — LEGADO V1",
+      "type": "Reanálise global (GMAO MERRA-2)",
+      "resolution_spatial": "0.5° × 0.625° (~50 km × 60 km, ~3.000 km² por célula)",
+      "resolution_temporal": "Diária (1981-presente)",
+      "variables": [
+        "PRECTOTCORR (mm/dia)",
+        "T2M/T2M_MAX/T2M_MIN (°C)",
+        "RH2M (%)",
+        "PS (kPa→hPa)",
+        "ALLSKY_SFC_SW_DWN (MJ/m2/dia)",
+        "WS2M (m/s)"
+      ],
+      "url": "https://power.larc.nasa.gov/",
+      "role_in_thor": "DEPRECIADO como alvo. Mantido apenas como fallback documentado para inputs X se ERA5-Land offline, e para comparação histórica (mostrar quanto o V1 subestimava extremos por suavização de 3000 km²).",
+      "diagnosis_v1": "Suavização extrema: 1 célula cobre 9.4× a área de Guarulhos (318 km²). Picos convectivos diluídos → R20 40 vs 0, QB99 -48%. Confirmado em auditoria S0.",
+      "license": "Aberto",
+      "status_v2": "Arquivo original preservado em data_prep/nasa_power_guarulhos_1981_2026_raw.csv, NÃO mais usado como pr_target"
+    },
+    "cordex_sam44": {
+      "name": "CORDEX SAM-44 (South America, 0.44°)",
+      "type": "Modelos climáticos regionais (RCM: RCA4, etc.) forçados por GCMs (CSIRO-Mk3-6-0, CanESM2, IPSL-CM5A-MR, NorESM1-M, MIROC5)",
+      "resolution_spatial": "0.44° (~50 km)",
+      "resolution_temporal": "Diária (historical 1950-2005, rcp45/rcp85 2006-2100)",
+      "variables": [
+        "pr (kg m-2 s-1 → mm/dia)",
+        "tas (°C)",
+        "ps (Pa)",
+        "hurs (%)",
+        "sfcWind (m/s)",
+        "rsds (W/m2)"
+      ],
+      "url": "https://esgf-node.ipsl.upmc.fr/search/cordex/ e ESGF metagrid",
+      "role_in_thor": "ALVO FUTURO de downscaling (2026-2100). Em V2: preparar interface (xarray + dask) em src/cordex_dataset.py (Sprint S7). NÃO usado no treino histórico.",
+      "status_v2": "Inventário em data_prep/cordex_esgf_search_summary.csv (30 datasets SAM-44 listados, ex: RCA4/CSIRO-Mk3-6-0 rcp85)"
+    }
+  },
+  "provenance_v2": {
+    "logic": "pr_target = CHIRPS (1981-2026 backbone) ⊕ CEMADEN onde disponível (2014+, blend ponderado) — validação cruzada com INMET. Inputs X = ERA5-Land (fallback NASA POWER se offline, com flag).",
+    "files": {
+      "ground_truth_v1": "data/ground_truth_guarulhos_daily.csv (16.649 dias, NASA POWER, DEPRECIADO)",
+      "ground_truth_v2": "data/ground_truth_guarulhos_daily_v2.csv (16.649 dias, CHIRPS+ERA5, colunas com sufixo _provenance)",
+      "chirps_raw": "data/chirps_guarulhos_1981_2026.csv",
+      "era5_raw": "data/era5land_guarulhos_1981_2026.csv",
+      "cemaden_raw": "data/cemaden_guarulhos_2014_2026.csv"
+    }
+  },
+  "ground_truth_v3": {
+    "built_from": [
+      "era5land_v2",
+      "era5_single_real",
+      "era5_pl_real_domain",
+      "chirps_v2_real_grid"
+    ],
+    "n_days": 16617,
+    "date_range": "1981-01-01→2026-06-30",
+    "note": "cape/tcwv REAIS (ERA5 single) substituem proxy/constante do V2; pr_target inalterado"
+  }
+}
