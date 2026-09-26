@@ -1,0 +1,57 @@
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+.conda/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Notebook checkpoints
+.ipynb_checkpoints
+
+# Large NetCDF files - ignore to allow committing docs without huge binaries (user requested)
+*.nc
+*.zip
+data/chirps_netcdf/
+data/era5land_netcdf/
+data/cordex/
+
+# Explicitly NOT ignoring CSV data and checkpoints (small) as requested originally,
+# but now NC/ZIP are ignored per user request to commit docs.
+# Keep CSVs for ground truth (small, few MB)
+!data/*.csv
+
+# Checkpoints - keep best_model and scaler, ignore test checkpoints
+checkpoints_test/
+checkpoints_thresh_test/
+checkpoints/*_test/
+*.tmp
+
+# Benchmarks cloned third-party repositories
+benchmarks/PyESD/
+benchmarks/scikit-downscale/
+benchmarks/neuralhydrology/
+benchmarks/TCN/
+!benchmarks/README.md
