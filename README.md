@@ -1,6 +1,4 @@
-# THOR-PIML — SEMCITEC 2026
-
-**Projeção do Regime Pluviométrico e Indicadores Bioclimáticos sob Cenários SSP (2026–2100) em Guarulhos-SP via Downscaling com o Modelo THOR-PIML**
+# THOR-PIML: Modelagem Híbrida com Física Informada para Projeção de Indicadores Bioclimáticos e Correção de Viés Sazonal em Guarulhos-SP sob Cenários SSP (2026–2100)
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
@@ -92,8 +90,8 @@ THOR-PIML-Semcitec2026/
 ### 1. Clonar o Repositório e Criar Ambiente Virtual
 
 ```bash
-git clone https://github.com/<SEU-USUARIO>/<SEU-REPOSITORIO>.git
-cd <SEU-REPOSITORIO>
+git clone https://github.com/Zentsy/THOR-PIML-SEMCITEC26.git
+cd THOR-PIML-SEMCITEC26
 
 python -m venv .venv
 # Linux / macOS:
@@ -131,7 +129,7 @@ Se utilizar este código ou os dados gerados em sua pesquisa, por favor cite:
 ```bibtex
 @inproceedings{thor_piml_semcitec2026,
   author    = {Silva, L. et al.},
-  title     = {THOR-PIML: Arquitetura Neural Híbrida com Física Informada para Projeção do Regime Pluviométrico sob Cenários SSP (2026–2100) em Guarulhos-SP},
+  title     = {THOR-PIML: Modelagem Híbrida com Física Informada para Projeção de Indicadores Bioclimáticos e Correção de Viés Sazonal em Guarulhos-SP sob Cenários SSP (2026–2100)},
   booktitle = {Anais da SEMCITEC 2026},
   year      = {2026},
   address   = {Guarulhos, Brasil}
