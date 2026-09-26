@@ -2,7 +2,11 @@
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status: Under Review](https://img.shields.io/badge/Status-Under%20Review-orange.svg)]()
+[![License: Academic Review Only](https://img.shields.io/badge/License-Academic%20Review%20Only-lightgrey.svg)]()
+
+> ⚠️ **Aviso de Submissão e Verificação Acadêmica:**  
+> Este repositório destina-se exclusivamente à auditoria de reprodutibilidade, consulta técnica de figuras e verificação experimental por parte da banca examinadora e do comitê científico. O manuscrito correspondente encontra-se em fase de avaliação para a SEMCITEC 2026. Todos os direitos sobre os dados e formulações estão reservados até a publicação oficial nos anais do evento. Proibida a redistribuição ou uso não autorizado.
 
 ---
 
@@ -120,13 +124,16 @@ python run_semcitec_pipeline.py
 
 ---
 
-## 📄 Licença e Citação
+## 📄 Termo de Uso e Licença Acadêmica
 
-Este projeto é disponibilizado sob a licença [MIT](LICENSE).
+Este repositório é disponibilizado sob **Licença de Avaliação Acadêmica Exclusiva (Todos os Direitos Reservados)**.
 
-Se utilizar este código ou os dados gerados em sua pesquisa, por favor cite:
+O código-fonte, pesos de modelos, figuras e tabelas aqui contidos têm como finalidade exclusiva permitir a auditoria e a verificação técnica da pesquisa pela **banca examinadora e comitê científico da SEMCITEC 2026**. Não é permitida a cópia, reutilização, distribuição pública ou derivação comercial sem autorização prévia dos autores antes da publicação oficial nos anais do evento.
 
-```bibtex
+A licença de código aberto (Open Source) e as instruções formais de citação (BibTeX / DOI) serão liberadas após a conclusão da avaliação e publicação dos anais da conferência.
+
+<!--
+Citação oficial reservada para os anais:
 @inproceedings{thor_piml_semcitec2026,
   author    = {Silva, L. et al.},
   title     = {THOR-PIML: Modelagem Híbrida com Física Informada para Projeção de Indicadores Bioclimáticos e Correção de Viés Sazonal em Guarulhos-SP sob Cenários SSP (2026–2100)},
@@ -134,4 +141,4 @@ Se utilizar este código ou os dados gerados em sua pesquisa, por favor cite:
   year      = {2026},
   address   = {Guarulhos, Brasil}
 }
-```
+-->
