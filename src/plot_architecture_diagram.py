@@ -17,14 +17,15 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
+from src.paths import get_paths
+
+_paths = get_paths()
 OUT_DIRS = [
-    Path(r"C:\Users\levib\Desktop\SEMCITEC26\CONIC\THOR\THOR-PIML\results\figures"),
-    Path(r"C:\Users\levib\.gemini\antigravity\worktrees\THOR-PIML\debug_mars_runtime_error\results\figures")
+    _paths.figures_dir
 ]
 for od in OUT_DIRS:
     od.mkdir(parents=True, exist_ok=True)
 
-ARTIFACT_DIR = Path(r"C:\Users\levib\.gemini\antigravity\brain\a3c6cc3a-1fc2-40ea-841b-b73b117484e2")
 
 def draw_publication_diagram(dark_mode=False):
     plt.rcParams.update({
@@ -254,9 +255,7 @@ def draw_publication_diagram(dark_mode=False):
         print(f"✓ Saved {png_f} and {pdf_f}")
     plt.close()
 
-    if ARTIFACT_DIR.exists():
-        art_f = ARTIFACT_DIR / f"fig_thor_v8_architecture_{tag}.png"
-        shutil.copy(OUT_DIRS[0] / f"fig_thor_v8_architecture_{tag}.png", art_f)
+
 
 if __name__ == "__main__":
     draw_publication_diagram(dark_mode=False)  # Light paper standard
