@@ -48,6 +48,8 @@ checkpoints_test/
 checkpoints_thresh_test/
 checkpoints/*_test/
 *.tmp
+tests/artifacts/
+
 
 # Benchmarks cloned third-party repositories
 benchmarks/PyESD/
