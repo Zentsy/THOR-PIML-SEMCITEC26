@@ -99,10 +99,6 @@ THOR-PIML-Semcitec2026/
 
 Este repositório é disponibilizado sob **Licença de Avaliação Acadêmica Exclusiva (Todos os Direitos Reservados)**.
 
-O código-fonte, pesos de modelos, figuras e tabelas aqui contidos têm como finalidade exclusiva permitir a auditoria e a verificação técnica da pesquisa pela **banca examinadora e comitê científico da SEMCITEC 2026**. Não é permitida a cópia, reutilização, distribuição pública ou derivação comercial sem autorização prévia dos autores antes da publicação oficial nos anais do evento.
-
-A licença de código aberto (Open Source) e as instruções formais de citação (BibTeX / DOI) serão liberadas após a conclusão da avaliação e publicação dos anais da conferência.
-
 <!--
 Citação oficial reservada para os anais:
 @inproceedings{thor_piml_semcitec2026,
