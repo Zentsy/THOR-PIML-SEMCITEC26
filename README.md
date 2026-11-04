@@ -2,22 +2,21 @@
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![Status: Under Review](https://img.shields.io/badge/Status-Under%20Review-orange.svg)]()
+[![Status: Under Review](https://img.shields.io/badge/Status-3°%20Place-green.svg)]()
 [![License: Academic Review Only](https://img.shields.io/badge/License-Academic%20Review%20Only-lightgrey.svg)](LICENSE)
 [![Propriedade](https://img.shields.io/badge/Propriedade-Autores%20%26%20Orientadores-003E47.svg)]()
 
 > ⚠️ **Aviso de Submissão e Verificação Acadêmica:**  
 > Este repositório destina-se exclusivamente à auditoria de reprodutibilidade, consulta técnica de figuras e verificação experimental por parte da banca examinadora e do comitê científico da SEMCITEC 2026.  
 > 
-> **Autores e Titularidade:** Victor Gabriel de Jesus Cursi & Caroline Raquel Silva Macris (e Orientadores)  
+> **Autores e Titularidade:** Victor Gabriel de Jesus Cursi & Caroline Raquel Silva Macris
+> **Orientadores:** Me. Luiz Carlos Rodrigues de Medeiros & prof. Maria Cristina Tagliari Diniz
 > **Filiação Acadêmica:** Graduandos no Centro Universitário Eniac (Guarulhos, SP)  
 > **Propriedade Intelectual:** Exclusiva dos Autores e Orientadores. Todos os direitos sobre os códigos, pesos e formulações estão reservados. Proibida a redistribuição comercial ou institucional não autorizada.
 
 ---
 
 ## 📌 Visão Geral
-
-Este repositório contém o código-fonte, pesos de modelo congelados, rotinas de inferência e dados de projeção climática secular (2026–2099) do projeto **THOR-PIML** (*Taylor-Hurdle Optimized Regional Physics-Informed Machine Learning*) para o município de Guarulhos-SP.
 
 O trabalho investiga a aplicação de uma arquitetura neural híbrida com física informada para realizar o *downscaling* estatístico das projeções do modelo regional **CORDEX SAM-22 (Eta-HadGEM2-ES)** sob os cenários socioeconômicos **SSP2-4.5** (estabilização) e **SSP5-8.5** (altas emissões), avaliando:
 1. **Recuperação da sazonalidade** frente ao viés de secamento (*dry bias*) sistemático do modelo forçador regional;
