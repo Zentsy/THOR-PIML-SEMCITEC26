@@ -1,0 +1,48 @@
+RESTRICTED ACADEMIC EVALUATION & RESEARCH LICENSE (SOURCE-AVAILABLE)
+====================================================================
+Copyright (c) 2024–2026 Victor Gabriel de Jesus Cursi, Caroline Raquel Silva Macris & Advisors (THOR-PIML Authors).
+All rights reserved.
+
+1. SCOPE AND GRANT OF ACCESS
+----------------------------
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software, neural network architecture, weights, code, and documentation
+files (the "Software"), exclusively for:
+  (a) Non-commercial academic peer review and scientific evaluation related to
+      the SEMCITEC 2026 and CONIC 2026 conferences;
+  (b) Personal study, non-commercial academic research, and peer-to-peer
+      reproducibility verification of the published results.
+
+2. STRICT PROHIBITIONS & RESTRICTIONS
+-------------------------------------
+Under NO circumstances may the Software, in whole or in part, in source or
+binary form (including trained weights, neural representations, configurations,
+and derived models), be used for:
+
+  (a) COMMERCIAL USE: Any commercial purpose, including but not limited to
+      for-profit services, consulting, operational forecasting platforms,
+      software-as-a-service (SaaS), or commercial model training.
+
+  (b) GOVERNMENTAL & STATE AGENCY USE: Any use, deployment, integration,
+      data ingestion, or operational execution by or on behalf of any
+      governmental authority, state agency, public administration body,
+      armed forces, military, or state-funded intelligence service, without
+      explicit, formal, prior written authorization from the copyright holders.
+
+  (c) REDISTRIBUTION & SUBLICENSING: Re-distributing, sublicensing, packaging,
+      claiming authorship, or publishing derivative works without explicit
+      attribution and written consent of the copyright holders.
+
+  (d) PATENTING: Applying for patents or intellectual property protection on
+      the algorithms, hybrid architectures, loss barriers, or workflows
+      disclosed herein.
+
+3. DISCLAIMER OF WARRANTY & LIMITATION OF LIABILITY
+---------------------------------------------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES,
+LOSS OF DATA, OPERATIONAL FAILURE, OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
+THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

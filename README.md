@@ -3,10 +3,15 @@
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![Status: Under Review](https://img.shields.io/badge/Status-Under%20Review-orange.svg)]()
-[![License: Academic Review Only](https://img.shields.io/badge/License-Academic%20Review%20Only-lightgrey.svg)]()
+[![License: Academic Review Only](https://img.shields.io/badge/License-Academic%20Review%20Only-lightgrey.svg)](LICENSE)
+[![Propriedade](https://img.shields.io/badge/Propriedade-Autores%20%26%20Orientadores-003E47.svg)]()
 
 > ⚠️ **Aviso de Submissão e Verificação Acadêmica:**  
-> Este repositório destina-se exclusivamente à auditoria de reprodutibilidade, consulta técnica de figuras e verificação experimental por parte da banca examinadora e do comitê científico. O manuscrito correspondente encontra-se em fase de avaliação para a SEMCITEC 2026. Todos os direitos sobre os dados e formulações estão reservados até a publicação oficial nos anais do evento. Proibida a redistribuição ou uso não autorizado.
+> Este repositório destina-se exclusivamente à auditoria de reprodutibilidade, consulta técnica de figuras e verificação experimental por parte da banca examinadora e do comitê científico da SEMCITEC 2026.  
+> 
+> **Autores e Titularidade:** Victor Gabriel de Jesus Cursi & Caroline Raquel Silva Macris (e Orientadores)  
+> **Filiação Acadêmica:** Graduandos no Centro Universitário Eniac (Guarulhos, SP)  
+> **Propriedade Intelectual:** Exclusiva dos Autores e Orientadores. Todos os direitos sobre os códigos, pesos e formulações estão reservados. Proibida a redistribuição comercial ou institucional não autorizada.
 
 ---
 
@@ -48,10 +53,10 @@ A arquitetura desacopla a dinâmica sinótica e a probabilidade de chuva por mei
 ## 🔒 Propriedade Intelectual & Acesso Restrito ao Modelo
 
 > [!IMPORTANT]
-> **Aviso de Proteção Intelectual e Integridade Tecnológica:**  
-> Os pesos neurais treinados (.pt), a parametrização profunda do tronco híbrido ResLSTM-TCN e o código-fonte de modelagem e treinamento (src/) constituem **propriedade intelectual protegida** dos autores e do **Centro Universitário ENIAC**.
+> **Aviso de Proteção Intelectual e Titularidade Tecnológica:**  
+> Os pesos neurais treinados (.pt), a parametrização profunda do tronco híbrido ResLSTM-TCN, a formulação termodinâmica de perda e o código-fonte proprietário de modelagem e treinamento constituem **propriedade intelectual exclusiva e intransferível dos AUTORES e ORIENTADORES**. O Centro Universitário ENIAC figura estritamente como filiação acadêmica dos alunos graduandos, não possuindo propriedade patrimonial, direitos autorais ou tecnológicos sobre o modelo.
 > 
-> Para resguardar a tecnologia desenvolvida e evitar apropriação indevida ou uso comercial não autorizado, os arquivos de modelo bruto e rotinas de treino foram retidos sob custódia privada. Pesquisadores, órgãos públicos e entidades interessadas em auditoria metodológica detalhada, cooperações técnicas ou licenciamento institucional devem entrar em contato formalmente com os autores.
+> Para resguardar a tecnologia desenvolvida e evitar apropriação indevida ou exploração comercial não autorizada, os arquivos de modelo bruto e rotinas de treino foram retidos sob custódia privada. Pesquisadores, órgãos públicos e entidades interessadas em auditoria técnica, cooperações científicas ou licenciamento institucional devem entrar em contato formalmente com os autores.
 
 ---
 
@@ -102,7 +107,7 @@ A licença de código aberto (Open Source) e as instruções formais de citaçã
 <!--
 Citação oficial reservada para os anais:
 @inproceedings{thor_piml_semcitec2026,
-  author    = {Silva, L. et al.},
+  author    = {Cursi, Victor Gabriel de Jesus and Macris, Caroline Raquel Silva},
   title     = {THOR-PIML: Modelagem Híbrida com Física Informada para Projeção de Indicadores Bioclimáticos e Correção de Viés Sazonal em Guarulhos-SP sob Cenários SSP (2026–2099)},
   booktitle = {Anais da SEMCITEC 2026},
   year      = {2026},
