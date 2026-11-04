@@ -61,7 +61,7 @@ A arquitetura desacopla a dinâmica sinótica e a probabilidade de chuva por mei
 
 ## 📁 Estrutura do Repositório & Produtos Disponibilizados
 
-`ash
+```text
 THOR-PIML-Semcitec2026/
 ├── data/                     # Dados de entrada
 │   ├── ground_truth_guarulhos_daily_v3.csv  # Linha de base observada (1981–2026)
@@ -86,7 +86,8 @@ THOR-PIML-Semcitec2026/
 │       └── projections_summary.json
 ├── requirements.txt          # Dependências do ambiente
 └── README.md
-`
+```
+
 ## 📊 Principais Resultados
 
 * **Superação do Viés de Secamento:** Enquanto o modelo CORDEX regional bruto projeta queda artificial na precipitação anual ($1.021{,}7\text{ mm/ano}$ no final do século no SSP5-8.5), o THOR-PIML recupera a resposta termodinâmica de maior disponibilidade de vapor ($\text{TCWV}$), alcançando $2.365{,}9\text{ mm/ano}$ com pico de verão concentrado (BIO16 de até $907{,}9\text{ mm}$).
