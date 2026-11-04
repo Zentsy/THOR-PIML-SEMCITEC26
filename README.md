@@ -45,13 +45,20 @@ A arquitetura desacopla a dinâmica sinótica e a probabilidade de chuva por mei
 
 ---
 
-## 📁 Estrutura do Repositório
+## 🔒 Propriedade Intelectual & Acesso Restrito ao Modelo
 
-```bash
+> [!IMPORTANT]
+> **Aviso de Proteção Intelectual e Integridade Tecnológica:**  
+> Os pesos neurais treinados (.pt), a parametrização profunda do tronco híbrido ResLSTM-TCN e o código-fonte de modelagem e treinamento (src/) constituem **propriedade intelectual protegida** dos autores e do **Centro Universitário ENIAC**.
+> 
+> Para resguardar a tecnologia desenvolvida e evitar apropriação indevida ou uso comercial não autorizado, os arquivos de modelo bruto e rotinas de treino foram retidos sob custódia privada. Pesquisadores, órgãos públicos e entidades interessadas em auditoria metodológica detalhada, cooperações técnicas ou licenciamento institucional devem entrar em contato formalmente com os autores.
+
+---
+
+## 📁 Estrutura do Repositório & Produtos Disponibilizados
+
+`ash
 THOR-PIML-Semcitec2026/
-├── checkpoints/              # Checkpoints pré-treinados e congelados
-│   ├── v8_hybrid_seed42.pt   # Pesos oficiais do modelo THOR-PIML V8
-│   └── scaler_v7.json        # Parâmetros de escalonamento robusto (treino)
 ├── data/                     # Dados de entrada
 │   ├── ground_truth_guarulhos_daily_v3.csv  # Linha de base observada (1981–2026)
 │   └── cordex/               # Séries diárias extraídas do CORDEX SAM-22
@@ -73,49 +80,9 @@ THOR-PIML-Semcitec2026/
 │       ├── cordex_ssp245_downscaled_2026_2099.csv
 │       ├── cordex_ssp585_downscaled_2026_2099.csv
 │       └── projections_summary.json
-├── src/                      # Código-fonte modular
-│   ├── calc_bioclimatic_indices.py
-│   ├── cordex_preprocessor.py
-│   ├── generate_semcitec_figures.py
-│   ├── generate_semcitec_tables.py
-│   ├── infer_cordex_v8.py
-│   ├── model.py
-│   └── physics_loss.py
-├── tests/                    # Testes de integração do pipeline
-├── run_semcitec_pipeline.py  # Script de execução e reprodução completa
 ├── requirements.txt          # Dependências do ambiente
 └── README.md
-```
-
----
-
-## 🚀 Instalação e Reprodução
-
-### 1. Clonar o Repositório e Criar Ambiente Virtual
-
-```bash
-git clone https://github.com/Zentsy/THOR-PIML-SEMCITEC26.git
-cd THOR-PIML-SEMCITEC26
-
-python -m venv .venv
-# Linux / macOS:
-source .venv/bin/activate
-# Windows (PowerShell):
-.venv\Scripts\Activate.ps1
-
-pip install -r requirements.txt
-```
-
-### 2. Executar o Pipeline Completo
-
-Para reproduzir a inferência secular, o cálculo dos indicadores bioclimáticos (BIO12–BIO19) e a geração de todas as figuras e tabelas de publicação em 300 DPI:
-
-```bash
-python run_semcitec_pipeline.py
-```
-
----
-
+`
 ## 📊 Principais Resultados
 
 * **Superação do Viés de Secamento:** Enquanto o modelo CORDEX regional bruto projeta queda artificial na precipitação anual ($1.021{,}7\text{ mm/ano}$ no final do século no SSP5-8.5), o THOR-PIML recupera a resposta termodinâmica de maior disponibilidade de vapor ($\text{TCWV}$), alcançando $2.365{,}9\text{ mm/ano}$ com pico de verão concentrado (BIO16 de até $907{,}9\text{ mm}$).
